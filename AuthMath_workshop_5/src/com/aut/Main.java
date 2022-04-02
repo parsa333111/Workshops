@@ -12,7 +12,7 @@ public class Main {
         int multiplyResult  = AUTMath.multiply(89, 12);
         assertResult(multiplyResult, 1068, "multiply");
 
-        int divideResult = AUTMath.divide(11,5);
+        double divideResult = AUTMath.divide(11,5);
         assertResult(divideResult, 2.2, "divide");
 
         int factorial = AUTMath.factorial(7);
@@ -25,7 +25,7 @@ public class Main {
         assertResult(fibResult, 34, "Fibonacci");
     }
 
-    private static void assertResult(int value, double expected, String operation)  {
+    private static void assertResult(double value, double expected, String operation)  {
         if (value != expected) {
             System.err.println("from " + operation + " function got: "  + value + " expected: " + expected);
             System.exit(1);
